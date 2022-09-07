@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/ >
+        <title>Document</title>
+        <style>
+            body { background: gray }
+            header { background: orange }
+            nav { background: yellow }
+            main { background: white }
+            aside { background: silver }
+            footer { background: red }
+
+            @media only screen and (min-width: 768px) {
+                #container { 
+                    max-width: 1000px;
+                    margin: auto;
+                    display: grid;
+                    grid-template-columns: 25% auto 160px;
+                    grid-template-rows: 100px 600px 40px;
+                    grid-template-areas:    'n h h'
+                                            'n m a'
+                                            'f f f';
+                }
+                header { grid-area: h }
+                nav { grid-area: n }
+                main { grid-area: m }
+                aside { grid-area: a }
+                footer { grid-area: f }
+            }
+        </style>
+
+    </head>
+    <body>
+        <div id="container">
+            <header>Header</header>
+            <nav>Menu</nav>
+            <main>Blah blah blah</main>
+            <aside>Reklam</aside>
+            <footer>Copyright</footer>
+        </div>
+    </body>
+</html>
